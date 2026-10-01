@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #e6e8ec;
+  background: #11131a;
+  line-height: 1.5;
+}
+
+a {
+  color: #5b8cff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.site-header {
+  background: #181b22;
+  border-bottom: 1px solid #2a2e37;
+}
+.site-header .container {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.site-header .logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #e6e8ec;
+}
+.site-header .logo:hover {
+  text-decoration: none;
+}
+
+main.container {
+  padding-top: 32px;
+  padding-bottom: 48px;
+  min-height: 60vh;
+}
+
+.site-footer {
+  border-top: 1px solid #2a2e37;
+  color: #9399a6;
+  font-size: 14px;
+}
+.site-footer .container {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: #5b8cff;
+  color: #fff;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.btn:hover {
+  background: #80a6ff;
+  text-decoration: none;
+}
+
+.category-block {
+  margin-bottom: 48px;
+}
+.category-block__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.category-block__header h2 {
+  margin: 0 0 4px;
+}
+.category-block__description {
+  margin: 0;
+  color: #9399a6;
+}
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 800px) {
+  .post-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.post-card {
+  background: #181b22;
+  border: 1px solid #2a2e37;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.post-card__image {
+  display: block;
+  aspect-ratio: 16/9;
+  background: #20242c;
+}
+.post-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.post-card__no-image {
+  width: 100%;
+  height: 100%;
+}
+.post-card__body {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.post-card__title {
+  font-size: 17px;
+  margin: 0 0 8px;
+}
+.post-card__title a {
+  color: #e6e8ec;
+}
+.post-card__description {
+  color: #9399a6;
+  font-size: 14px;
+  margin: 0 0 12px;
+  flex: 1;
+}
+.post-card__meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #9399a6;
+}
+
+.category-header {
+  margin-bottom: 24px;
+}
+.category-header p {
+  color: #9399a6;
+}
+
+.sort-bar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+.sort-bar span {
+  color: #9399a6;
+}
+.sort-bar a {
+  padding: 4px 10px;
+  border-radius: 8px;
+  color: #e6e8ec;
+}
+.sort-bar a.active {
+  background: #5b8cff;
+  color: #fff;
+}
+.sort-bar a:hover {
+  text-decoration: none;
+}
+
+.pagination {
+  display: flex;
+  gap: 8px;
+  margin-top: 32px;
+}
+.pagination a {
+  padding: 6px 12px;
+  border: 1px solid #2a2e37;
+  border-radius: 8px;
+  color: #e6e8ec;
+}
+.pagination a.active {
+  background: #5b8cff;
+  border-color: #5b8cff;
+  color: #fff;
+}
+.pagination a:hover {
+  text-decoration: none;
+}
+
+.post-full {
+  background: #181b22;
+  border: 1px solid #2a2e37;
+  border-radius: 8px;
+  padding: 32px;
+}
+.post-full__image {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+.post-full h1 {
+  margin: 0 0 12px;
+}
+.post-full__meta {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  color: #9399a6;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.post-full__meta .tag {
+  padding: 3px 10px;
+  border: 1px solid #2a2e37;
+  border-radius: 999px;
+  color: #e6e8ec;
+}
+.post-full__description {
+  font-size: 17px;
+  color: #9399a6;
+  margin-bottom: 24px;
+}
+.post-full__content {
+  font-size: 16px;
+}
+.post-full__content p {
+  margin: 0 0 16px;
+}
+
+.related {
+  margin-top: 48px;
+}
+.related h2 {
+  margin-bottom: 20px;
+}
+
+.not-found {
+  text-align: center;
+  padding: 80px 0;
+}
+.not-found h1 {
+  font-size: 64px;
+  margin: 0;
+}
